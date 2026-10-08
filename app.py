@@ -6,7 +6,7 @@ from google import genai
 st.set_page_config(page_title="Tutor ESIA", page_icon="🏗️")
 st.title("Tutor Virtual de Física - ESIA 🏗️")
 st.write("Proyecto de investigación experimental - Dr. César Gabriel Huerta")
-
+st.info(f"Diagnóstico de llave: {os.environ.get('GEMINI_API_KEY')[:10]}...")
 # --- 2. MANEJO DEL HISTORIAL DE CHAT ---
 # Inicializa la memoria para que no se borren los mensajes al recargar
 if "messages" not in st.session_state:
