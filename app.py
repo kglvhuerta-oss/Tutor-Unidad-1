@@ -6,7 +6,7 @@ from google import genai
 st.set_page_config(page_title="Tutor ESIA", page_icon="🏗️")
 st.title("Tutor Virtual de Física - ESIA 🏗️")
 st.write("Proyecto de investigación experimental - Dr. César Gabriel Huerta A")
-st.info(f"Diagnóstico de llave: {os.environ.get('GEMINI_API_KEY')[:10]}...")
+
 # --- 2. MANEJO DEL HISTORIAL DE CHAT ---
 # Inicializa la memoria para que no se borren los mensajes al recargar
 if "messages" not in st.session_state:
@@ -105,7 +105,7 @@ Para confirmar que has leído esta información, comprendes tu responsabilidad y
 
             # La petición ahora ocurre SOLO cuando el alumno envía un mensaje
             interaction = client.interactions.create(
-                model='gemini-1.5-flash',
+                model='models/gemini-1.5-flash',
                 input=prompt_usuario,
                 system_instruction=system_instruction,
                 tools=tools,
