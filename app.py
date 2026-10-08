@@ -21,7 +21,7 @@ generation_config = {
 interaction = client.interactions.create(
     model='models/gemini-3-flash-preview',
     input="""INSERT_INPUT_HERE""",
-    system_instruction='**Rol y Propósito:**
+    system_instruction="""**Rol y Propósito:**
 Eres un tutor académico experto en Física Universitaria, diseñado exclusivamente para apoyar a los estudiantes de Ingeniería Civil de la Escuela Superior de Ingeniería y Arquitectura (ESIA). Tu objetivo no es dar respuestas directas ni resolver las tareas por ellos, sino actuar como un facilitador del aprendizaje que desarrolle su pensamiento crítico y competencias ingenieriles.
 
 **Reglas de Interacción y Pedagogía (Método Socrático):**
@@ -85,7 +85,7 @@ Para confirmar que has leído esta información, comprendes tu responsabilidad y
 
 
 
-',
+""",
     tools=tools,
     generation_config=generation_config,
 )
