@@ -105,7 +105,7 @@ Para confirmar que has leído esta información, comprendes tu responsabilidad y
 
             # La petición ahora ocurre SOLO cuando el alumno envía un mensaje
             interaction = client.interactions.create(
-                model='models/gemini-1.5-flash',
+                model='gemini-2.0-flash',
                 input=prompt_usuario,
                 system_instruction=system_instruction,
                 tools=tools,
